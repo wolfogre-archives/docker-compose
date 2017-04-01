@@ -1,0 +1,11 @@
+version: '3'
+services:
+  jenkins:
+    image: "jenkins"
+    ports:
+     - "8080:8080"
+     - "50000:50000"
+    volumes:
+     - /data/docker-volumes/jenkins_jenkins_1:/var/jenkins_home
+    extra_hosts:
+     - "gv.em:172.31.32.248"
